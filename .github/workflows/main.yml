@@ -10,11 +10,9 @@ jobs:
     steps:
       - name: Autenticar no Docker Hub
         run: echo "Executando o comando Docker Login"
-
       - name: Construção da Imagem Docker
         run: echo "Executando o comando Docker Build"
-
-      -name: Envio da Imagem Docker
+      - name: Envio da Imagem Docker
         run: echo "Executando o comando Docker push"
 
   cd:
@@ -22,10 +20,8 @@ jobs:
     steps:
       - name: Autenticar na AWS
         run: echo "Executando o comando aws configure"
-
       - name: Configurar o kubectl
         run: echo "Executando o comando aws eks update-kubeconfig"
-
-      -name: Deploy dos manifestos no kubernetes
+      - name: Deploy dos manifestos no kubernetes
         run: echo "Executando o comando kubectl apply"
       
